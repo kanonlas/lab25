@@ -63,4 +63,35 @@ void List::append(int d){
 	size++;
 }
 
+void List::remove(int p){
+	size--;
+	Node *current = root;
+	Node p = *current->next;
+	Node q = *current->next->next;
+	
+	for(int i = 0; i < size; i++){
+         current = current->next;
+  } 
+    Node q = p; 
+  	Node p = *current;
+	
+
+
+	/*
+	Node *n = new Node;
+	n->data = d;
+	n->next = NULL;
+	while(n->next != NULL){
+	 n->next = root; // การเเทรกค่าไว้ที่ข้างหน้า 
+	}
+	if(root != NULL){
+		Node *current = root; //เริ่มค่าที่รูทเลย
+		while(current->next){
+			current = current->next;
+		}
+		current->next = n;
+	}
+	delete n;
+	*/
+}
 //Write List::remove() here
