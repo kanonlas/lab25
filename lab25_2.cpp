@@ -16,16 +16,35 @@ int main(){
 	
 	list<string> line_up;
 	list<string>::iterator loc;
+	list<string>::iterator loc2;
+	list<string>::iterator loc3;
 	
 	line_up.push_back("Alice");
 	line_up.push_back("Bob");
 	
 	loc = find(line_up.begin(),line_up.end(),"Bob");
 	line_up.insert(loc,"Oscar");
-	
-	//Write your code here
-	
+	line_up.push_back("Luffy");
+	line_up.push_back("Sanji");
+	line_up.push_back("Nami");
+
+	line_up.erase(find(line_up.begin(),line_up.end(),"Alice"));
+	line_up.erase(find(line_up.begin(),line_up.end(),"Oscar"));
+
+	loc2 = find(line_up.begin(),line_up.end(),"Luffy");
+	line_up.insert(loc2,"Narutu");
+	line_up.erase(find(line_up.begin(),line_up.end(),"Luffy"));
+
+	line_up.insert(line_up.begin(),"Prayath");
+
+	loc3 = find(line_up.begin(),line_up.end(),"Bob");
+	line_up.insert(loc3,"Tony");
+
+	line_up.erase(find(line_up.begin(),line_up.end(),"Prayath"));
+	line_up.erase(find(line_up.begin(),line_up.end(),"Tony"));
+	line_up.erase(find(line_up.begin(),line_up.end(),"Bob"));
+
 	printList(line_up);
-		
 	return 0;
+
 }
