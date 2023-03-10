@@ -63,35 +63,40 @@ void List::append(int d){
 	size++;
 }
 
-void List::remove(int p){
+void List::remove(int d){
 	size--;
 	Node *current = root;
-	Node p = *current->next;
-	Node q = *current->next->next;
-	
-	for(int i = 0; i < size; i++){
-         current = current->next;
-  } 
-    Node q = p; 
-  	Node p = *current;
-	
+	/*Node *p = current->next;
+	Node *q = current->next->next;
 
-
-	/*
-	Node *n = new Node;
-	n->data = d;
-	n->next = NULL;
-	while(n->next != NULL){
-	 n->next = root; // การเเทรกค่าไว้ที่ข้างหน้า 
-	}
-	if(root != NULL){
-		Node *current = root; //เริ่มค่าที่รูทเลย
-		while(current->next){
-			current = current->next;
-		}
-		current->next = n;
-	}
-	delete n;
-	*/
+if(d== 0) root = p;
+else{
+for(int i = 0; i < d; i++){
+	if(i == d-1)current = current;
+	current = p;
 }
-//Write List::remove() here
+q = p;
+}
+delete current;
+}*/
+
+	Node *p = NULL;
+
+	if( d == 0) root = current->next; //ถ้าเป็นตัวเเรก
+	else{
+		for(int i = 0; i < d; i++){ 
+			if(i == d-1){ //ถ้าเป็นตรงกลาง
+				p = current;
+			}
+			 	current = current->next;
+		}
+
+		 p->next = current->next;
+
+		}
+
+		delete current;
+
+}
+
+
