@@ -1,6 +1,16 @@
 #include<iostream>
-
+#include<set>
 using namespace std;
+
+int count(int data[], int n){
+	set<int> m;
+    set<int>::iterator i;
+
+	for(int i = 0; i < n; i++){
+		m.insert(data[i]); 	
+	}
+		return m.size();
+}
 
 //Write function count() here.
 
